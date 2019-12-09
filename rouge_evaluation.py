@@ -1,0 +1,10 @@
+from rouge import Rouge 
+
+hypothesis = "KUALA LUMPUR: Lebih 65 peratus atau 337,869 daripada 555,820 tiket kereta api bagi perkhidmatan KTM Intercity dan Perkhidmatan Tren Elektrik (ETS) Keretapi Tanah Melayu Berhad (KTMB) untuk perjalanan ke seluruh negara sempena Aidilfitri mulai akhir Mei hingga awal Jun depan, sudah terjual.Katanya, KTMB menyediakan 118,000 tiket kereta api dan ETS untuk jualan bagi tempoh ‘super pick’ antara 31 Mei hingga 9 Jun depan dengan 88,000 daripadanya sudah pun terjual.“Kadar jualan tiket semasa waktu puncak sudah mencapai 75 peratus, manakala baki kebanyakannya membabitkan perjalanan dari Utara Semenanjung Malaysia ke Kuala Lumpur.“Justeru, saya menyarankan orang ramai membeli tiket kereta api dan ETS lebih awal tanpa menunggu saat akhir untuk mengelakkan kesesakan sama ada di kaunter mahu pun secara dalam talian,” katanya pada sidang media selepas pelancaran aplikasi MyRailtime di sini, hari ini.Pelancaran aplikasi MyRailtime yang diwujudkan KTMB itu disempurnakan oleh Menteri Pengangkutan, Anthony Loke.Mengulas lanjut, Mohd Rani berkata KTMB juga bercadang menambah bilangan kekerapan perjalanan perkhidmatan kereta api antara bandar dan ETS sekiranya terdapat keperluan mendesak menjelang musim perayaan Aidilfitri nanti."
+
+
+reference = "KUALA LUMPUR: Lebih 65 peratus atau 337,869 daripada 555,820 tiket kereta api bagi perkhidmatan KTM Intercity dan Perkhidmatan Tren Elektrik (ETS) Keretapi Tanah Melayu Berhad (KTMB) untuk perjalanan ke seluruh negara sempena Aidilfitri mulai akhir Mei hingga awal Jun depan, sudah terjual. Ketua Pegawai Eksekutif KTMB, Mohd Rani Hisham Samsudin, berkata setakat ini KTMB sudah berjaya menjual lebih 300,000 tiket kereta api biasa dan ETS untuk ke semua destinasi ke seluruh negara. "
+
+rouge = Rouge()
+scores = rouge.get_scores(hypothesis, reference)
+scores
